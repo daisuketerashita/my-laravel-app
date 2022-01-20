@@ -18,10 +18,10 @@ services:
   mysql:
     image: mysql:5.7
     environment:
-      MYSQL_DATABASE: ****
-      MYSQL_USER: ****
-      MYSQL_PASSWORD: ****
-      MYSQL_ROOT_PASSWORD: ****
+      MYSQL_DATABASE: common
+      MYSQL_USER: daisuke
+      MYSQL_PASSWORD: daisuke
+      MYSQL_ROOT_PASSWORD: daisuke
     ports:
       - "3306:3306"
     volumes:
