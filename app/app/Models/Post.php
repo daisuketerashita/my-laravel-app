@@ -50,7 +50,6 @@ class Post extends Model
      * @var array
      */
     public static $rules = [
-        'user_id' => 'required|numeric',
         'title' => 'required',
         'content' => 'required'
     ];
