@@ -5,6 +5,7 @@ namespace App\Models;
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\User;
 
 /**
  * Class Post
@@ -54,5 +55,8 @@ class Post extends Model
         'content' => 'required'
     ];
 
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
     
 }
