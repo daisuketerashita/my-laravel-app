@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreatePostsTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -14,9 +15,9 @@ class CreatePostsTable extends Migration
     public function up()
     {
         Schema::create('posts', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id');
-            $table->string('title');
+            $table->id('id');
+            $table->foreignId('user_id')->constrained();
+            $table->string('title', 250);
             $table->text('content');
             $table->timestamps();
             $table->softDeletes('deleted_at',0);
@@ -30,6 +31,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::drop('posts');
     }
 }
