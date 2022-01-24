@@ -26,3 +26,4 @@ Route::resource('posts', App\Http\Controllers\PostController::class);
 
 
 Route::get('/user/show', [App\Http\Controllers\UserController::class, 'show'])->middleware('auth')->name('user.show');
+Route::get('/user/edit', [App\Http\Controllers\UserController::class, 'edit'])->middleware('auth')->name('user.edit');

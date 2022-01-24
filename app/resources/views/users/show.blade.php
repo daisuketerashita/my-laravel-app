@@ -9,9 +9,13 @@
                 </div>
                 <div class="col-sm-6">
                     <a class="btn btn-default float-right"
-                       href="{{ route('posts.index') }}">
-                        Back
-                    </a>
+                    href="{{ route('posts.index') }}">
+                    Back
+                </a>
+                <a href="{{ route('user.edit', [$user->id]) }}"
+                       class='btn btn-default float-right'>
+                        <i class="far fa-edit"></i>
+                </a>
                 </div>
             </div>
         </div>
